@@ -20,8 +20,8 @@ function formatRuntime(runtime) {
 
 function appendMovie(movie, element) {
   new ElementBuilder("article").id(movie.imdbID)
-    .append(new ElementBuilder("img").with("src", movie.Poster))
     .append(new ElementBuilder("h1").text(movie.Title))
+    .append(new ElementBuilder("img").with("src", movie.Poster))
     .append(new ElementBuilder("p")
       .append(new ElementBuilder("button").text("Edit")
         .listener("click", () => location.href = "edit.html?imdbID=" + movie.imdbID)))
@@ -99,7 +99,6 @@ window.onload = function () {
         genreBttn.onclick = () => loadMovies(genre);
         genre_li.appendChild(genreBttn);
         listElement.appendChild(genre_li);
-
       })
 
       /* When a first button exists, we click it to load all movies. */

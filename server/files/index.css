@@ -9,17 +9,17 @@ h1 {
 }
 
 /* Constrain the page to the viewport */
-html,
-body {
-  height: 100vh;
+html {
+  height: 100%;
 }
 
-/* Center the nav's header and list */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 
 /* navigation buttons have full width */
 nav button {
@@ -35,6 +35,70 @@ ul {
 
 /* Task 2.1. Lay out the childs of the 'body' using Grid Template Areas. */
 
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "h h"
+    "n m"
+    "f f";
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "m"
+      "f";
+  }
+}
+
+* {
+  /* forbid horizontal scrolling */
+  box-sizing: border-box;
+}
+
+header {
+  background: lightcoral;
+  min-height: 64px;
+  max-height: 128px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  grid-area: h;
+  padding: 20px;
+}
+
+nav {
+  background: lightsalmon;
+  min-width: 192px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  grid-area: n;
+}
+
+main {
+  background: lightgreen;
+  display: flex;
+  height: auto;
+  width: auto;
+  flex-wrap: wrap;
+  grid-area: m;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+footer {
+  background: lightsteelblue;
+  min-height: 64px;
+  max-height: 128px;
+  display: flex;
+  grid-area: f;
+}
 
 /* Task 3.1. Make the header element a flex container and center its children
    vertically and horizontally.
@@ -67,9 +131,9 @@ article {
   border-radius: 30px;
   padding: 20px;
   box-shadow: 3px 3px 3px 3px rgb(110, 96, 103);
-  margin: 0px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
   width: auto;
-  max-width: 500px;
+  width: 500px;
 }
 
 article:hover {
