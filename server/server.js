@@ -15,7 +15,18 @@ app.use(express.static(path.join(__dirname, 'files')));
    This endpoint returns a sorted array of all the genres of the movies
    that are currently in the movie model.
 */
-
+app.get('/genres', function (req, res) { // doing this removed the 404 error at bottom of index.html
+  // to-dos: get genres from movies in movie-model -- sort alphabetically
+  let movies = Object.values(movieModel);
+  let genreSet = new Set(); // Set removes duplicates automatically
+  movies.forEach(movie => { // Loop nested --> for movies with several genres, for each movie iterate through its genres
+    movie.Genres.forEach(genre => {
+      genreSet.add(genre);
+    })
+  })
+  let genres = Array.from(genreSet).sort(); // Set and JSON don't get along; .sort for alphabetically
+  res.send(genres);
+})
 
 
 /* Task 1.4: Extend the GET /movies endpoint:
