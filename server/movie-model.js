@@ -72,5 +72,50 @@ module.exports = {
     Poster: "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_SX300.jpg",
     Metascore: 81,
     imdbRating: 8.4,
+  },
+
+  tt0092067: {
+    imdbID: "tt0092067",
+    Title: "Castle in the Sky",
+    Released: "1991-07-19",
+    Runtime: 124,
+    Genres: ["Animation", "Adventure", "Family"],
+    Directors: ["Hayao Miyazaki"],
+    Writers: ["Hayao Miyazaki", "Jonathan Swift"],
+    Actors: ["Mayumi Tanaka", "Keiko Yokozawa", "Kotoe Hatsui"],
+    Plot: "Pazu's life changes when he meets Sheeta, a girl whom pirates are chasing for her crystal amulet, which has the potential to locate Laputa, a legendary castle floating in the sky.",
+    Poster: "https://m.media-amazon.com/images/M/MV5BZjcyMjg2MzktNjg4YS00MjQzLTg0YWQtMjUyZDk2Y2Y0YzZjXkEyXkFqcGc@._V1_SX300.jpg",
+    Metascore: 78,
+    imdbRating: 8.0
+  },
+
+  tt0347149: {
+    imdbID: "tt0347149",
+    Title: "Howl's Moving Castle",
+    Released: "2005-06-17",
+    Runtime: 119,
+    Genres: ["Animation", "Adventure", "Family"],
+    Directors: ["Hayao Miyazaki"],
+    Writers: ["Diana Wynne Jones", "Hayao Miyazaki"],
+    Actors: ["Chieko Baishô", "Takuya Kimura", "Tatsuya Gashûin"],
+    Plot: "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTY1OTg0MjE3MV5BMl5BanBnXkFtZTcwNTUxMTkyMQ@@._V1_SX300.jpg",
+    Metascore: 82,
+    imdbRating: 8.2
+  },
+
+  tt0245429: {
+    imdbID: "tt0245429",
+    Title: "Spirited Away",
+    Released: "2003-03-28",
+    Runtime: 124,
+    Genres: ["Animation", "Adventure", "Family"],
+    Directors: ["Hayao Miyazaki"],
+    Writers: ["Hayao Miyazaki"],
+    Actors: ["Miyu Irino", "Rumi Hiiragi", "Mari Natsuki"],
+    Plot: "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches and spirits, and where humans are changed into beasts.",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_SX300.jpg",
+    Metascore: 96,
+    imdbRating: 8.6
   }
 };

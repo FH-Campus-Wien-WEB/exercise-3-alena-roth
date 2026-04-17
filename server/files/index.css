@@ -24,6 +24,9 @@ h3 {
 
 p {
   color: white;
+  background: none;
+  text-align: center;
+  padding: 10px;
 }
 
 li {
@@ -52,6 +55,7 @@ ul {
   padding: 0px;
   margin: 16px;
   list-style-type: none;
+  align-items: center;
 }
 
 /* Task 2.1. Lay out the childs of the 'body' using Grid Template Areas. */
@@ -165,7 +169,7 @@ article:hover {
 }
 
 a {
-  color: rgb(61, 47, 255);
+  color: rgb(146, 79, 121);
 }
 
 span {
@@ -183,11 +187,32 @@ span {
 
 .genre {
   padding: 10px;
-  border-radius: 100px;
-  border-style: solid;
+  border-radius: 10px;
+  border-style: none;
   border-width: 2px;
-  color: rgb(65, 13, 29);
-  background-color: rgb(243, 243, 243);
+  color: rgb(224, 213, 215);
+  background-color: rgba(73, 32, 46, 0.822);
   font-weight: bold;
   margin: 5px;
+}
+
+.plot {
+  background-color: rgb(238, 233, 213);
+  color: rgb(65, 13, 29);
+  border-radius: 10px;
+
+  padding: 15px;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.plot:hover {
+  font-size: 20px;
+  font-style: normal;
 }
