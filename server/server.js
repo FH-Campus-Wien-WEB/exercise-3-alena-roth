@@ -34,9 +34,18 @@ app.get('/genres', function (req, res) { // doing this removed the 404 error at 
    return only movies that have the given genre
  */
 app.get('/movies', function (req, res) {
-  let movies = Object.values(movieModel)
+  let movies = Object.values(movieModel);
+
+  //new
+  const genre = req.query.genre;
+  if (genre) {
+    movies = movies.filter(movie => // no curly brackets allowed; why? 
+      movie.Genres.includes(genre)
+    );
+  }
+
   res.send(movies);
-})
+});
 
 // Configure a 'get' endpoint for a specific movie
 app.get('/movies/:imdbID', function (req, res) {
