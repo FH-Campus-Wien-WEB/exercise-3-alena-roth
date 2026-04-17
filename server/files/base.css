@@ -1,21 +1,17 @@
 body {
   font-family: "Trebuchet MS", sans-serif;
-  background-color: rgb(201, 156, 156);
-  color: rgb(49, 4, 19);
-}
-
-main {
-  color: #ffffff;
+  background-color: rgb(197, 171, 171);
 }
 
 button {
-  padding: 4px;
-  border-width: 1px;
-  border-radius: 4px;
-  font-size: 105%;
+  background-color: rgb(243, 243, 243);
+  color: rgb(65, 13, 29);
+  border-radius: 30px;
+  padding: 15px;
+  margin: 15px;
 }
 
 button:hover {
-  background-color: rgb(99, 34, 47);
+  background-color: rgb(160, 105, 116);
   color: white;
 }

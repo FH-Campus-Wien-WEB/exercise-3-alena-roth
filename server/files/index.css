@@ -3,9 +3,31 @@
 h1 {
   text-align: center;
   color: rgb(85, 28, 37);
+  background-color: rgb(243, 243, 243);
+  max-width: 100%;
+  border-radius: 40px;
+  font-size: 45px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(85, 28, 37);
   background-color: lightgoldenrodyellow;
   max-width: 100%;
   border-radius: 40px;
+  font-size: 30px;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+li {
+  color: white;
 }
 
 /* Constrain the page to the viewport */
@@ -19,7 +41,6 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
 
 /* navigation buttons have full width */
 nav button {
@@ -38,6 +59,7 @@ ul {
 body {
   display: grid;
   grid-template-columns: 200px 1fr;
+  height: 100vh;
   grid-template-areas:
     "h h"
     "n m"
@@ -46,6 +68,7 @@ body {
 
 @media (max-width: 700px) {
   body {
+    min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-areas:
       "h"
@@ -61,7 +84,7 @@ body {
 }
 
 header {
-  background: lightcoral;
+  background: none;
   min-height: 64px;
   max-height: 128px;
   justify-content: center;
@@ -72,7 +95,7 @@ header {
 }
 
 nav {
-  background: lightsalmon;
+  background: null;
   min-width: 192px;
   max-width: 100%;
   flex-direction: column;
@@ -82,7 +105,7 @@ nav {
 }
 
 main {
-  background: lightgreen;
+  background: null;
   display: flex;
   height: auto;
   width: auto;
@@ -93,7 +116,7 @@ main {
 }
 
 footer {
-  background: lightsteelblue;
+  background: rgb(243, 243, 243);
   min-height: 64px;
   max-height: 128px;
   display: flex;
@@ -142,20 +165,29 @@ article:hover {
 }
 
 a {
-  color: greenyellow;
+  color: rgb(61, 47, 255);
 }
 
 span {
   margin-right: 4px;
 }
 
-.genre {
-  padding: 10px;
+.genre_li {
+  background-color: rgb(177, 143, 156);
   border-radius: 10px;
   border-style: solid;
-  border-width: 2px;
-  border-color: rgb(216, 201, 206);
+  border-width: 50px;
+  padding: 10px;
   color: rgb(65, 13, 29);
-  background-color: rgb(177, 143, 156);
+}
+
+.genre {
+  padding: 10px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 2px;
+  color: rgb(65, 13, 29);
+  background-color: rgb(243, 243, 243);
   font-weight: bold;
+  margin: 5px;
 }
