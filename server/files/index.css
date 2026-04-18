@@ -1,12 +1,13 @@
 @import url(base.css);
 
 h1 {
-  text-align: center;
   color: rgb(85, 28, 37);
   background-color: rgb(243, 243, 243);
   max-width: 100%;
-  border-radius: 40px;
+  border-radius: 0px;
   font-size: 45px;
+  width: 100%;
+  text-align: center;
 }
 
 h2 {
@@ -47,15 +48,8 @@ body {
 
 /* navigation buttons have full width */
 nav button {
-  width: 100%;
-}
-
-/* Remove unnecessary space and bullets from the lists */
-ul {
-  padding: 0px;
-  margin: 16px;
-  list-style-type: none;
-  align-items: center;
+  width: auto;
+  min-width: 160px;
 }
 
 /* Task 2.1. Lay out the childs of the 'body' using Grid Template Areas. */
@@ -80,6 +74,24 @@ body {
       "m"
       "f";
   }
+
+  nav {
+    max-height: 120px;
+    overflow-y: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  nav button {
+    white-space: nowrap;
+    height: auto;
+  }
 }
 
 * {
@@ -87,30 +99,58 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  background: none;
-  min-height: 64px;
-  max-height: 128px;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  grid-area: h;
-  padding: 20px;
-}
-
 nav {
-  background: null;
+  background: none;
   min-width: 192px;
   max-width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   grid-area: n;
 }
 
+/* Task 3.1. Make the header element a flex container and center its children
+   vertically and horizontally.
+ */
+
+header {
+  background: none;
+  min-height: auto;
+  max-height: 128px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  grid-area: h;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Task 3.2. Make the list items of the unordered list in the nav element a flex container, 
+   use column direction and center the child items
+ */
+
+/* Remove unnecessary space and bullets from the lists */
+ul {
+  padding: 0px;
+  margin: 16px;
+  list-style-type: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Task 3.3. Make the main element a Flexbox container */
+
 main {
   background: null;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: auto;
   width: auto;
   flex-wrap: wrap;
@@ -119,28 +159,17 @@ main {
   overflow-x: auto;
 }
 
+/* Task 3.4. Make the footer's ul a Flexbox container */
+
 footer {
   background: rgb(243, 243, 243);
   min-height: 64px;
   max-height: 128px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: f;
 }
-
-/* Task 3.1. Make the header element a flex container and center its children
-   vertically and horizontally.
- */
-
-
-/* Task 3.2. Make the list items of the unordered list in the nav element a flex container, 
-   use column direction and center the child items
- */
-
-/* Task 3.3. Make the main element a Flexbox container */
-
-
-/* Task 3.4. Make the footer's ul a Flexbox container */
-
 
 /* From here on styling from exercise 1 */
 img {
@@ -210,6 +239,7 @@ span {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  min-height: 100px;
 }
 
 .plot:hover {
